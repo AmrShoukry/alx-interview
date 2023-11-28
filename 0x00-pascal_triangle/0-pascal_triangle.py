@@ -8,14 +8,14 @@ def pascal_triangle(n):
     if n <= 0:
         return []
     else:
-        BigArray = []
+        BigArr = []
         for i in range(n):
             smallArray = []
             for j in range(i + 1):
                 if j == 0 or j == i:
                     smallArray.append(1)
                 else:
-                    smallArray.append(BigArray[i - 1][j - 1] + BigArray[i - 1][j])
-            BigArray.append(smallArray)
+                    smallArray.append(BigArr[i - 1][j - 1] + BigArr[i - 1][j])
+            BigArr.append(smallArray)
 
-        return BigArray                
+        return BigArr
