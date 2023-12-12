@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" minoperations """
+""" minoperationsModule """
 
 
 def minOperations(n: int) -> int:
@@ -13,8 +13,8 @@ def minOperations(n: int) -> int:
     while (n != current):
         if (n % current == 0):
             operations += 2
+            increments = current
             current *= 2
-            increments *= 2
         else:
             operations += 1
             current += increments
