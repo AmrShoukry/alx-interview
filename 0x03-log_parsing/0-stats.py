@@ -15,7 +15,7 @@ status_codes = {
     '500': 0
 }
 
-lines_count = 1
+lines_count = 0
 total_size = 0
 
 pattern = (
@@ -48,7 +48,7 @@ try:
         else:
             continue
 
-        if (lines_count % 10 == 0):
+        if (lines_count != 0 and lines_count % 10 == 0):
             get_details()
 
         detect_status_code()
