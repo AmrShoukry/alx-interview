@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" STATS """
 
 import sys
 import re
@@ -24,6 +25,7 @@ pattern = (
 
 
 def get_details():
+    """ Get details """
     print(f"File size: {total_size}")
     for key in sorted(status_codes.keys()):
         value = status_codes[key]
@@ -32,6 +34,7 @@ def get_details():
 
 
 def detect_status_code():
+    """ Detect status code """
     for key, value in status_codes.items():
         if log_info['status_code'] == key:
             status_codes[key] += 1
