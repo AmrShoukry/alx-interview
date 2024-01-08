@@ -96,7 +96,7 @@ def get_possible_solutions(x: int, y: int, upper: int,
 
 def get_queens(number: int) -> None:
     """ Main function to get the queens solutions """
-    for i in range(1, number):
+    for i in range(number):
         reserved_rows = []
         reserved_columns = []
         reserved_pairs = set()
