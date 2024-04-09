@@ -2,7 +2,6 @@
 """ queens problem """
 
 import sys
-from typing import List, Set, Tuple
 
 if (len(sys.argv) != 2):
     print('Usage: nqueens N')
@@ -19,7 +18,7 @@ except Exception:
 
 
 def add_reserved_pairs(x: int, y: int, upper: int,
-                       reserved_pairs: Set[Tuple[int, int]]) -> None:
+                       reserved_pairs) -> None:
     """ Add diagonal pairs """
     xx = x - 1
     yy = y - 1
@@ -54,8 +53,8 @@ def add_reserved_pairs(x: int, y: int, upper: int,
         yy += 1
 
 
-def get_available_columns(x: int, upper: int, reserved_columns: Set,
-                          reserved_pairs: Set[Tuple[int, int]]) -> Set[int]:
+def get_available_columns(x: int, upper: int, reserved_columns,
+                          reserved_pairs):
     """ Get available columns """
     possible_values = set()
     for i in range(upper):
@@ -68,9 +67,9 @@ def get_available_columns(x: int, upper: int, reserved_columns: Set,
 
 
 def get_possible_solutions(x: int, y: int, upper: int,
-                           reserved_rows: List[int],
-                           reserved_columns: List[int],
-                           reserved_pairs: Set[Tuple[int, int]]) -> None:
+                           reserved_rows,
+                           reserved_columns,
+                           reserved_pairs):
     """ Get all possible solutions """
     reserved_columns.append(y)
     reserved_rows.append(x)
