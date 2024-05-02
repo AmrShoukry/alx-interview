@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+""" making change """
+
 def makeChange(coins, total):
     """ Make change """
 
@@ -18,3 +21,4 @@ def makeChange(coins, total):
     if (memo[total] == float('inf')):
         return -1
     return memo[total]
+
